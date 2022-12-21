@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+
+<!-- About us -->
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1>You have successfully Logout </h1>
+    <p class="lead text-muted">Please login again .</p>
+    <p>
+      <a href="{% url 'login_url'%}" class="btn btn-primary my-2">Login</a>
+      <a href="{% url 'index'%}" class="btn btn-secondary my-2">Home</a>
+    </p>
+  </div>
+</section>
+
+
+
+{% endblock content %}
