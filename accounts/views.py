@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 # Create your views here.
+
 def index(request):
     return render(request,'base.html')
 
@@ -18,4 +19,7 @@ def register(request):
             return redirect('login_url')
     else:
         form_obj = UserCreationForm()
-        return render(request,'accounts/register.html',{'form':form_obj})
+        return render(request,
+                      'accounts/register.html',
+                      {'form':form_obj}
+                      )
